@@ -3,9 +3,11 @@
     box-sizing: border-box;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Trirong");
+
 body {
     margin: 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Trirong", serif;
 }
 header, section {
     padding: 20px;
@@ -18,22 +20,26 @@ p, li {
     background-color: #ffffff;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-family: "Trirong", serif;
 }
 
 #in-class_work {
     background-color: #83ecf5;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-family: "Trirong", serif;
 }
 
 #homework {
     background-color: #ffffff;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-family: "Trirong", serif;
 }
 
 #inspiration {
     background-color: #83ecf5;
     padding-top: 40px;
     padding-bottom: 40px;
+    font-family: "Trirong", serif;
 }
