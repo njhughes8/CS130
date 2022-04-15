@@ -3,11 +3,9 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Akshar:100,100i,300,300i,400,400i,700,700i,900,900i|Akshar&display=swap');
-
 body {
     margin: 0px;
-    font-family: Akshar, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 header, section {
     padding: 20px;
@@ -23,7 +21,7 @@ p, li {
 }
 
 #in-class_work {
-    background-color: #755ef6;
+    background-color: #9483f5;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -35,7 +33,7 @@ p, li {
 }
 
 #inspiration {
-    background-color: #755ef6;
+    background-color: #9483f5;
     padding-top: 40px;
     padding-bottom: 40px;
 }
