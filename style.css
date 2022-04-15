@@ -16,8 +16,26 @@ p, li {
     line-height: 1.5em;
 }
 
+#tutorials {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#in-class_work {
+    background-color: #755ef6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#homework {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
 #inspiration {
-    background-color: #F0F0F0;
+    background-color: #755ef6;
     padding-top: 40px;
     padding-bottom: 40px;
 }
