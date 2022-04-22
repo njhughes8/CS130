@@ -16,3 +16,17 @@ marging
 height
 width
 */
+
+section {
+    border: solid 1px rgb(128, 128, 122);
+    padding: 10px;
+    width: 25%;
+}
+
+p, h2, button {
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+}
