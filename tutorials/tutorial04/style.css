@@ -1,12 +1,112 @@
 .container {
    display: grid;
-/* grid-template-columns: ???;
-   grid-template-rows: ???;
-   grid-template-areas: ???; 
-*/
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 0.5fr 1fr 1fr;
+   grid-template-areas: 
+   "menu1     .     menu2     menu2"
+   "card1  card2  card3  aside"
+   "main  main  main  aside"; 
+
    min-height: 100vh;
+   padding: 15px;
+   grid-column-gap: 25px;
+   grid-row-gap: 25px;
+}
+
+.menu1 {
+   grid-area: menu1;
+   background: rgb(166, 0, 169);
+   max-height: 75px;
+   max-width: 80%;
+   padding: 10px;
+}
+
+.menu2 {
+   grid-area: menu2;
+   background: rgb(255, 255, 0);
+   max-height: 75px;
+   padding: 10px;
+}
+
+.card1 {
+   grid-area: card1;
+   background: rgb(24, 123, 216);
+   padding: 10px;
+}
+
+.card2 {
+   grid-area: card2;
+   background: rgb(24, 123, 216);
+   padding: 10px;
+}
+
+.card3 {
+   grid-area: card3;
+   background: rgb(24, 123, 216);
+   padding: 10px;
+}
+
+.main {
+   grid-area: main;
+   background: rgb(24, 123, 216);
+   padding: 10px;
+}
+
+.aside {
+   grid-area: aside;
+   background: rgb(61, 78, 95);
+   padding: 10px;
 }
 
 @media (max-width: 1024px) {
-   /* tablet layout here */
+   .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.5fr 0.25fr 1.25fr 1fr 1fr;
+      grid-template-areas: 
+      "menu1  menu2"
+      "aside aside"
+      "card1  card2"
+      "card3 card3"
+      "main  main"; 
+   
+      min-height: 100vh;
+      padding: 15px;
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+   }
+
+   .menu1 {
+      max-height: 50px;
+      max-width: 60%;
+   }
+
+   .menu2 {
+      max-height: 50px;
+   }
 }
+
+@media (max-width: 700px) {
+   .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 0.4fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas: 
+      "menu1"
+      "menu2"
+      "card1"
+      "card2"
+      "card3"
+      "main"
+      "aside"; 
+   
+      min-height: 100vh;
+      padding: 15px;
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+   }
+
+   .menu1 {
+      max-width: 25%;
+   }
+} 
