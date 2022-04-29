@@ -82,15 +82,77 @@ footer {
 
 /* Your Code Here */
 
+.fa-spotify {
+    padding: 5px;
+    margin-left: 25px;
+}
 
+.fa-home {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.fa-search {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.fa-headphones-alt {
+    padding: 10px;
+    margin-left: 27px;
+    border-left: solid 3px rgb(72, 206, 90);
+}
 
 /********************************/
 /* Part B: Header & Nav Styling */
 /********************************/
 
-/* Your Code Here */
+header {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
 
+header > * {
+    display: flex;
+    margin: 30px;
+    padding: 5px;
+}
 
+.fa-user {
+    padding-right: 10px;
+}
+
+#upgrade {
+    border: solid 2px rgb(226, 226, 226);
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#profile {
+    border: solid 2px #111;
+    border-radius: 15px;
+    background-color: rgb(35, 35, 35);
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+nav > * {
+    display: flex;
+    margin: 15px;
+    padding: 5px;
+}
+
+#artists {
+    border-bottom: solid 3px rgb(72, 206, 90);
+}
 
 
 
@@ -98,15 +160,128 @@ footer {
 /* Part C: Artists Panel */
 /*************************/
 
-/* Your Code Here */
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 50%;
+}
 
+.artist-card {
+    width: 17%;
+    border: #111;
+    border-radius: 10px;
+    background: rgb(50, 50, 50);
+    margin: 10px;
+    height: 90%;
+}
 
+.artist-card > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-card img {
+    width: 75%;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: 10%;
+}
+
+.artist-card .play-button {
+    display: none;
+    background: rgb(72, 206, 90);
+    border-radius: 50%;
+    border: none;
+    padding: 12px;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer h2, p {
+    margin-left: 20px;
+}
+
+.card-footer h2 {
+    font-size: 18px;
+}
+
+.card-footer p {
+    font-size: 14px;
+}
+
+.artist-card .fa-play {
+    color: white;
+    margin-left: 2px;
+}
 
 
 /**************************/
 /* Part D: Responsive UIs */
 /**************************/
 
-/* Your Code Here */
+@media (max-width: 1024px) {
+    .artist-card {
+        width: 30%;
+    }
+}
 
+@media (max-width: 700px) {
 
+    .artist-card {
+        width: 45%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: #222;
+    }
+
+    aside {
+        display: none;
+    }
+
+    #upgrade {
+        display: none;
+    }
+
+    header {
+        width: 100vw;
+        left: 0;
+    }
+
+    .artist-card .play-button {
+        margin-top: -50px;
+    }
+}
+
+/**************************/
+/*      Extra Credit      */
+/**************************/
+
+#sidebar a {
+    color: rgb(196, 196, 196);
+    
+}
+
+#sidebar a:hover {
+    color: white;
+}
+
+#upgrade:hover, #profile:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+#playlists:hover, #albums:hover {
+    border-bottom: solid 3px rgb(72, 206, 90);
+}
+
+.artist-card:hover .play-button {
+    display: flex;
+}
