@@ -21,14 +21,31 @@ body * {
 
 main {
     display: flex;
+    justify-content: space-between;
+}
+
+section {
+    width: 22%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
 @media only screen and (max-width: 1000px) {
-    /* Your code here */
+    main{
+        flex-wrap: wrap;
+    }
+
+    section {
+        width: 48%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    /* Your code here */
+    section {
+        width: 100%;
+    }
 }
 

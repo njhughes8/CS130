@@ -34,10 +34,17 @@ body {
 /* Task 2 */
 
 .task-2.container {
+  border: solid 10px #444;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .task-2 .item-1 {
+  grid-column-start: 3;
+  grid-column-end: span 3;
 }
 
 .task-2 .item-2 {
+  grid-column-start: 7;
+  grid-column-end: span 4;
 }
