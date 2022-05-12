@@ -18,6 +18,8 @@
  * 
  */
 
+let currentIndex = 0
+
 const images = [
     'images/field1.jpg',
     'images/purple.jpg',
@@ -46,6 +48,9 @@ initScreen();
 const showImage = (ev) => {
     const elem = ev.currentTarget;
     console.log(elem.style.backgroundImage);
+    currentIndex = parseInt(elem.dataset.index);
+    console.log(currentIndex);
+    document.querySelector('.featured_image').style.backgroundImage = elem.style.backgroundImage;
 
     // your job: set the .featured_image's backgroundImage to the
     // element that was just clicked.
@@ -61,3 +66,28 @@ const imageElements = document.querySelectorAll('.image');
 for (const elem of imageElements) {
     elem.onclick = showImage;
 }
+
+const showNext = (ev) => {
+    currentIndex += 1;
+    console.log("currentIndex:", currentIndex);
+    // update .featured_image
+    if(currentIndex == images.length) {
+        currentIndex = 0;
+    }
+    document.querySelector('.featured_image').style.backgroundImage = `url('${images[currentIndex]}')`;
+
+};
+
+const showPrev = (ev) => {
+    currentIndex -= 1;
+    console.log("currentIndex:", currentIndex);
+    // update .featured_image
+    if(currentIndex == -1) {
+        currentIndex = images.length - 1;
+    }
+    document.querySelector('.featured_image').style.backgroundImage = `url('${images[currentIndex]}')`;
+};
+
+document.querySelector('.next').onclick = showNext;
+document.querySelector('.prev').onclick = showPrev;
+document.querySelector('.featured_image').onclick = showNext;
