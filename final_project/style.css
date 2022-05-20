@@ -1,0 +1,46 @@
+/* You're welcome to change any of this! */
+* {
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Trirong&display=swap");
+
+body {
+    margin: 0px;
+    font-family: "Trirong", sans-serif;
+}
+header, section {
+    padding: 20px;
+    font-family: "Trirong", sans-serif;
+}
+p, li {
+    line-height: 1.5em;
+}
+
+#tutorials {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "Trirong", sans-serif;
+}
+
+#in-class_work {
+    background-color: #83ecf5;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "Trirong", sans-serif;
+}
+
+#homework {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "Trirong", sans-serif;
+}
+
+#inspiration {
+    background-color: #83ecf5;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: "Trirong", sans-serif;
+}
