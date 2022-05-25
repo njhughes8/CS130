@@ -27,7 +27,7 @@ const getTracks = (term) => {
   
           console.log(firstFive[0]);
   
-          //   covnvert to html
+          //   convert to html
           let html = firstFive.map(track2Html);
   
           //  plug it back to the index.html file
@@ -57,11 +57,43 @@ const getTracks = (term) => {
 getTracks("Vicetone");
 
 const getAlbums = (term) => {
-    console.log(`
-        get albums from spotify based on the search term
-        "${term}" and load them into the #albums section 
-        of the DOM...`);
+    let url = `https://www.apitutor.org/spotify/simple/v1/search?type=album&q=${term}`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.length > 0) {
+          let allAlbums = data;
+  
+          console.log(allAlbums);
+  
+          //   covnvert to html
+          let html = allAlbums.map(album2Html);
+  
+          //  plug it back to the index.html file
+          document.querySelector("#albums").innerHTML = html;
+        } else {
+          let html = "<p>No albums found that match your search criteria. </p>";
+          document.querySelector("#albums").innerHTML = html;
+        }
+      });
 };
+
+const album2Html = (album) => {
+  return `
+    <section class="album-card" id=${album.id}>
+      <div>
+          <img src=${album.image_url}>
+          <h2>${album.name}</h2>
+          <div class="footer">
+              <a href=${album.spotify_url} target="_blank">
+                  view on spotify
+              </a>
+          </div>
+      </div>
+  </section>  `;
+};
+
+getAlbums("Vicetone");
 
 const getArtist = (term) => {
     let url = `https://www.apitutor.org/spotify/simple/v1/search?type=artist&q=${term}`;
@@ -108,7 +140,20 @@ getArtist("Vicetone");
 
 const handleTrackClick = (ev) => {
     const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
-    console.log(previewUrl);
+    console.log(ev.currentTarget.querySelector('img'));
+    document.querySelector('#current-track').innerHTML = `
+      <button class="track-item preview" data-preview-track=${previewUrl} onclick="handleTrackClick(event);">
+        <img src=${ev.currentTarget.querySelector('img').src}>
+        <i class="fas play-track fa-play" aria-hidden="true"></i>
+        <div class="label">
+            <h2>${ev.currentTarget.querySelector('.label > h2').innerHTML}</h2>
+            <p>
+              ${ev.currentTarget.querySelector('.label > p').innerHTML}
+            </p>
+        </div>
+      </button>`;
+    audioPlayer.setAudioFile(previewUrl);
+    audioPlayer.play();
 }
 
 document.querySelector('#search').onkeyup = (ev) => {

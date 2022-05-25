@@ -3,18 +3,19 @@
     box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Trirong&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 
-body {
-    margin: 0px;
-    font-family: "Trirong", sans-serif;
+header, main, #description {
+    font: 15px Verdana;
 }
-header, section {
-    padding: 20px;
-    font-family: "Trirong", sans-serif;
+
+header, #description {
+    text-align: center;
 }
-p, li {
-    line-height: 1.5em;
+
+#description {
+    margin: 50px;
+    font-size: 25px;
 }
 
 #tutorials {
