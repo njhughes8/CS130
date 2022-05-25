@@ -142,7 +142,7 @@ const handleTrackClick = (ev) => {
     const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
     console.log(ev.currentTarget.querySelector('img'));
     document.querySelector('#current-track').innerHTML = `
-      <button class="track-item preview" data-preview-track=${previewUrl} onclick="handleTrackClick(event);">
+      <div class="track-item preview" data-preview-track=${previewUrl}>
         <img src=${ev.currentTarget.querySelector('img').src}>
         <i class="fas play-track fa-play" aria-hidden="true"></i>
         <div class="label">
@@ -151,7 +151,7 @@ const handleTrackClick = (ev) => {
               ${ev.currentTarget.querySelector('.label > p').innerHTML}
             </p>
         </div>
-      </button>`;
+      </div>`;
     audioPlayer.setAudioFile(previewUrl);
     audioPlayer.play();
 }
