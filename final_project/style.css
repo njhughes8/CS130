@@ -6,7 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 
 header, main, #description {
-    font: 15px Verdana;
+    font-family: "Karla";
+   /* font: 15px Verdana; */
 }
 
 head, body {
@@ -28,19 +29,20 @@ header, #description, #genres {
 }
 
 #genres {
+    font-size: 25px;
+    font: Verdana;
+}
+
+#genres a {
+    color: rgb(255, 92, 119);
     display: grid;
     grid-template-rows: auto 10px;
     grid-template-areas:
-       "h2"
        "a a a a"
        "a a a a"
        "a a a"
        "a a a";
-    height: 100vh;
-}
-
-#genres a {
-    color: rgb(255, 92, 119)
+    
 }
 
 #genres a:hover {
