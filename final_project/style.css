@@ -9,39 +9,40 @@ header, main, #description {
     font: 15px Verdana;
 }
 
-header, #description {
-    text-align: center;
+head, body {
+    background-color: black;
 }
 
+header, #description, #genres {
+    text-align: center;
+    color: white;
+}
+   
 #description {
     margin: 50px;
     font-size: 25px;
+    padding: 75px;
+    background-image: url(https://d27k8xmh3cuzik.cloudfront.net/wp-content/uploads/2019/02/OG-EUROPE-EDMFESTepb0310.jpg);
+    background-size: 100% 100%;
+    
 }
 
-#tutorials {
-    background-color: #ffffff;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-family: "Trirong", sans-serif;
+#genres {
+    display: grid;
+    grid-template-rows: auto 10px;
+    grid-template-areas:
+       "h2"
+       "a a a a"
+       "a a a a"
+       "a a a"
+       "a a a";
+    height: 100vh;
 }
 
-#in-class_work {
-    background-color: #83ecf5;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-family: "Trirong", sans-serif;
+#genres a {
+    color: rgb(255, 92, 119)
 }
 
-#homework {
-    background-color: #ffffff;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-family: "Trirong", sans-serif;
-}
-
-#inspiration {
-    background-color: #83ecf5;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    font-family: "Trirong", sans-serif;
+#genres a:hover {
+    color: greenyellow;
 }
