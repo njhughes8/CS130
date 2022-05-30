@@ -30,19 +30,28 @@ header, #description, #genres {
 
 #genres {
     font-size: 25px;
-    font: Verdana;
+    font: Verdana; 
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+       "h2"
+       "a1 a2 a3 a4"
+       "a a a a"
+       "a a a"
+       "a a a"; */
 }
 
 #genres a {
     color: rgb(255, 92, 119);
-    display: grid;
-    grid-template-rows: auto 10px;
-    grid-template-areas:
-       "a a a a"
-       "a a a a"
-       "a a a"
-       "a a a";
-    
+    width: 25%;
+    padding: 10px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
 }
 
 #genres a:hover {
