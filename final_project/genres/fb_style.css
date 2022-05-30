@@ -1,0 +1,28 @@
+/* You're welcome to change any of this! */
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+header, main, #description, #opinion {
+    font-family: "Karla";
+   /* font: 15px Verdana; */
+}
+
+head, body {
+    background-color: black;
+}
+
+header, #description, #opinion {
+    text-align: center;
+    color: white;
+}
+   
+#description {
+    margin: 50px;
+    font-size: 25px;
+    padding: 75px;
+
+}
+
