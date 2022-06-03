@@ -5,6 +5,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
 
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 6fr 2fr;
+    grid-template-areas: 
+    "title title"
+    "description description"
+    "player opinion"
+    "playlist playlist";
+}
+
 header, main, #description, #opinion {
     font-family: "Karla";
    /* font: 15px Verdana; */
