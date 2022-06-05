@@ -33,14 +33,6 @@ header, #description, #genres {
     font: Verdana; 
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-       "h2"
-       "a1 a2 a3 a4"
-       "a a a a"
-       "a a a"
-       "a a a"; */
 }
 
 #genres a {
@@ -56,4 +48,16 @@ h2 {
 
 #genres a:hover {
     color: greenyellow;
+}
+
+@media (max-width: 1024px) {
+    #genres a {
+        width: 33%;
+    }
+}
+
+@media (max-width: 700px) {
+    #genres a {
+        width: 50%;
+    }
 }

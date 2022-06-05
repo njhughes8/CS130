@@ -1,0 +1,127 @@
+/* You're welcome to change any of this! */
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "description description"
+    "opinion player"
+    "playlist signoff";
+}
+
+header, #description, #opinion, #signoff {
+    font-family: "Karla";
+    font-size: 25px;
+    padding: 10px;
+}
+
+header, #description, #opinion, #signoff, #player {
+    text-align: center;
+    color: white;
+}
+   
+#description {
+    display: grid;
+    grid-area: description;
+    margin: 50px;
+    font-size: 25px;
+    padding: 75px;
+
+}
+
+#opinion {
+    display: grid;
+    grid-area: opinion;
+    margin-top: 100px;
+}
+
+#player {
+    display: grid;
+    grid-area: player;
+}
+
+#playlist {
+    display: grid;
+    grid-area: playlist;
+}
+
+#signoff {
+    display: grid;
+    grid-area: signoff;
+    margin-top: 100px;
+}
+
+#future_container {
+    background-image: linear-gradient(180deg, rgb(174, 0, 255), black);
+    
+}
+
+#electro_container {
+    background-image: linear-gradient(180deg, rgb(0, 174, 255), black);
+}
+
+#deep_container {
+    background-image: linear-gradient(180deg, rgb(0, 255, 200), black);
+}
+
+#meldub_container {
+    background-image: linear-gradient(180deg, rgb(247, 93, 180), black);
+}
+
+#glitch_container {
+    background-image: linear-gradient(180deg, rgb(244, 89, 89), black);
+}
+
+#dnb_container {
+    background-image: linear-gradient(180deg, rgb(199, 212, 54), black);
+}
+
+header {
+    min-height: 25%;
+}
+
+@media (max-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "description description"
+        "opinion player"
+        "signoff signoff"
+        "playlist playlist";
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.6fr 0.1fr 1fr;
+        grid-template-areas: 
+        "description"
+        "player"
+        "opinion"
+        "signoff"
+        "playlist";
+    }
+}
+
+#back {
+    font-family: "Karla";
+    font-size: 20px;
+    border-radius: 40px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+#back:hover {
+    background-color: blue;
+}
