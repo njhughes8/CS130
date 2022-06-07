@@ -13,6 +13,7 @@ main {
     "description description"
     "player opinion"
     "signoff playlist";
+    font-family: "Karla";
 }
 
 header, #description, #opinion, #signoff {
